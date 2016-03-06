@@ -2,6 +2,16 @@
 
 People as Pokémon.
 
+Augmented Reality Game that gives people the option to be Pokémon or 
+Pokémasters, using the mobile phone as a way to overlay an alter-reality that 
+is Poké-qua-being.
+
+## MVP
+
+1. Antifragile ecosystem of two-tier virtual local economies.
+2. Leveling Up gets you BTC (trade HP for BTC)! Winning Matches gets you BTC!
+3. Turn your “smart” phone into a Pokédex.
+
 ## Overview
 
 Turns mobile device into an Augmented Reality (AR) Game where users choose to 
