@@ -33,77 +33,91 @@ her HP, she gets the risk of evolution, and percentage of group reward).
 
 Toward a more REST-ful interface, we set up the following Aliases:
 
-    aka
-      has-surf # P2PKH Base Subaccounts or Pokémasters Accounts can have these Actions
-        [DATA] goto # go to an Action Asset
-        [DATA] acl
-    aka
-      can-evolve # Pokémon Accounts
-        [DATA] goto # go to an Action Asset
-        [DATA] acl
+```
+aka
+  has-surf # P2PKH Base Subaccounts or Pokémasters Accounts can have these Actions
+    [DATA] goto # go to an Action Asset
+    [DATA] acl
+aka
+  can-evolve # Pokémon Accounts
+    [DATA] goto # go to an Action Asset
+    [DATA] acl
+```
 
 A more complete example for closed systems:
 
 ```
-    aka
-      can-view # Pokémasters Accounts can have these Actions
-        [DATA] goto
-          /asset/p2pkh/Xj8nk3.../
-        [DATA] acl
-          [
-              {
-                  "subjects": [ { "addresses": [ ], "required": 0 } ],
-                  "permissions": { "account_modify": "Permit", "account_create": "Permit" }
-              },
-              {
-                  "subjects": [ { "addresses": [ "<some-other-address>" ], "required": 1 } ],
-                  "permissions": { "account_spend": "Permit" }
-              }
-          ]
+aka
+  can-view # Pokémasters Accounts can have these Actions
+    [DATA] goto
+      /asset/p2pkh/Xj8nk3.../
+    [DATA] acl
+      [
+          {
+              "subjects": [ { "addresses": [ ], "required": 0 } ],
+              "permissions": { "account_modify": "Permit", "account_create": "Permit" }
+          },
+          {
+              "subjects": [ { "addresses": [ "<some-other-address>" ], "required": 1 } ],
+              "permissions": { "account_spend": "Permit" }
+          }
+      ]
 ```
 
 ### Assets
 
 A Pokémaster User might have the following Asset:
 
-    asset
-      Pokéball
-        [ACC] /asset/Pokéball/
-        [DATA] asdef
+```
+asset
+  Pokéball
+    [ACC] /asset/Pokéball/
+    [DATA] asdef
+```
 
 A Pokémon User might have the following Asset:
 
-    asset
-      Attack.{{NAME}}
-        [ACC] /asset/Attack.{{NAME}}/
-        [DATA] asdef
+```
+asset
+  Attack.{{NAME}}
+    [ACC] /asset/Attack.{{NAME}}/
+    [DATA] asdef
+```
 
 ### Actions
 
 All Action Assets are P2PKH:
 
-    aka
-      use-potion # P2PKH Base Subaccounts or Pokémasters Accounts can have these Actions
-        [DATA] goto # go to an Action Asset
-        [DATA] acl
+```
+aka
+  use-potion # P2PKH Base Subaccounts or Pokémasters Accounts can have these Actions
+    [DATA] goto # go to an Action Asset
+    [DATA] acl
+```
 
 Pointing to the Action Asset:
 
-    asset
-      p2pkh
-        {{Xj8nk3...}}
-          [ACC] /asset/p2pkh/Xj8nk3...
-          [DATA] asdef
+```
+asset
+  p2pkh
+    {{Xj8nk3...}}
+      [ACC] /asset/p2pkh/Xj8nk3...
+      [DATA] asdef
+```
 
 ### Normal Users
 
 Where to receive funds:
 
-    p2pkh
-      <address>
-        [ACC] /asset/p2pkh/Xj8nk3...
+```
+p2pkh
+  <address>
+    [ACC] /asset/p2pkh/Xj8nk3...
+```
 
 ### Subaccounts
 
-    /account/JigglyPuff/:DATA:goto
+```
+/account/JigglyPuff/:DATA:goto
+```
 
