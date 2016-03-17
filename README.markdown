@@ -2,6 +2,8 @@
 
 People as Pokémon.
 
+![Most people don’t surf either.](https://github.com/nerdfiles/pokemon-world/blob/master/design/has-surf.png)
+
 Augmented Reality Game that gives people the option to be Pokémon or 
 Pokémasters, using the mobile phone as a way to overlay an alter-reality that 
 is Poké-qua-being.
